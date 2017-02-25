@@ -1,0 +1,47 @@
+﻿<div id="envoiSMS">
+	<div class="row-fluid">
+		<div class="span8">
+			<p>Ce module permet d'envoyer des SMS à des contacts pré-enregistrés.</p>
+			<h3>Structures des phrases :</h3>
+			<p>
+				Pour éviter de rentrer en conflit avec d'autres plugins, je ne crée qu'une seule variante par personne:
+				<ul>
+					<li>Sarah envoie un texto à Jean</li>
+					<li>Sarah envoie un texto à Robert</li>
+					<li>Sarah envoie un texto à Juliette</li>
+					<li>Sarah envoie un texto à ...</li>
+				</ul>
+			</p>
+			
+			<h3>Pré-requis:</h3>
+			<h4>Etape 1 - Création du compte</h4>
+			<p><ul>
+				<li>Allez sur à l'adresse <a href="https://www.pushbullet.com/" target="_blank">https://www.pushbullet.com/</a> pour créer un compte.</li>
+				<li>Téléchargez l'application sur votre téléphone.</li>
+				<li>Allez sur à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>, cliquez sur "<b>Create Access Token</b>" et gardez la page ouverte nous en aurons besoin.</li>
+			</ul></p>
+			
+			<h4>Etape 2 - Configuration du plugin (.prop)</h4>
+			
+			<p><ul>
+				<li>Ouvrez <a href="http://127.0.0.1:8080/portal" target="_blank">l'interface de SARAH</a>, cliquez sur configurer l'extension (du plugin sms) et collez l'<b>access token</b> qu'on à créé juste avant.</li>
+				<li>Allez dans le dossier "config" présent dans le dossier du plugin, éxécutez le fichier "recupDevices.bat" et collez à nouveau l'<b>access token</b> lorsque c'est demandé.</li>
+				<li>Dans le fichier qui vient d'être créé (devices.json), identifiez le "nickname" correspondant à votre téléphone (par exemple pour moi c'est Galaxy S4) puis récupérez la valeur du "iden" qui se trouve quelques valeurs avant.<br>
+				Et le coller dans "<b>target_device_iden</b>" dans l'interface SARAH.</li>
+				<li>Allez dans le dossier "config" présent dans le dossier du plugin, éxécutez le fichier "recupUser.bat" et collez à nouveau l'<b>access token</b> lorsque c'est demandé.</li>
+				<li>Dans le fichier qui vient d'être créé (user.json), récupérez la valeur du "iden" qui se trouve quasiment au début. Et le coller dans "<b>source_user_iden</b>" dans l'interface SARAH.</li>
+			</ul></p>
+
+		    <h4>Etape 3 - Ajouter des contacts</h4>
+			<p><ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul></p>
+			
+
+
+		</div>
+	</div>
+</div>

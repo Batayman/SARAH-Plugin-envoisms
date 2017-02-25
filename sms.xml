@@ -1,0 +1,13 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulesms" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulesms" scope="public">
+    <example>Sarah envoie un texto</example>
+    <tag>out.action=new Object(); </tag>
+    <item weight="2">Sarah</item>
+	<one-of>
+	<item>envoie un texto à Batayman<tag> out.action.destinataire="batayman"; </tag></item>
+	<item>envoie un texto à Patricia<tag> out.action.destinataire="patricia"; </tag></item>
+	<item>envoie un texto à Robert<tag> out.action.destinataire="robert"; </tag></item>
+	</one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/sms";</tag>
+  </rule>
+</grammar>

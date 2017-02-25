@@ -1,0 +1,12 @@
+{
+  "modules" : { 
+    "sms"  : {
+      "description"			: "Envoie des messages",
+      "version"    			: "1.0",
+	  "auteur"				: "Batayman",
+      "access_token"		: "https://www.pushbullet.com/account",
+	  "target_device_iden"	: "https://api.pushbullet.com/v2/devices",
+	  "source_user_iden"	: "https://api.pushbullet.com/v2/users/me"
+    }
+  }
+}
