@@ -34,7 +34,13 @@
 
 		    <h4>Etape 3 - Ajouter des contacts</h4>
 			<p><ul>
-				<li></li>
+				<li>Dans le dossier du plugin, ouvrez le fichier "listeContacts.js" et rajoutez vos contacts sous cette forme :
+					<ul><li>{"name" : "prénom", "number" : "0666666666"},<br>
+					Ne pas oublier la virgule à la fin de chaque ligne. Ne pas supprimer la ligne {"name" : "debug", "number" : "debug"}
+					</li></ul></li>
+				<li>Dans le dossier du plugin, ouvrez le fichier "sms.xml" et rajoutez une ligne pour chacun de vos contacts sous cette forme :
+					<ul><li> < item >envoie un texto à prénom < tag > out.action.destinataire="prénom"; < /tag > < /item >
+					</li></ul></li>
 				<li></li>
 				<li></li>
 				<li></li>
