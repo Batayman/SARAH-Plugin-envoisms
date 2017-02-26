@@ -16,9 +16,9 @@
 			<h3>Pré-requis:</h3>
 			<h4>Etape 1 - Création du compte</h4>
 			<p><ul>
-				<li>Allez sur à l'adresse <a href="https://www.pushbullet.com/" target="_blank">https://www.pushbullet.com/</a> pour créer un compte.</li>
+				<li>Allez à l'adresse <a href="https://www.pushbullet.com/" target="_blank">https://www.pushbullet.com/</a> pour créer un compte.</li>
 				<li>Téléchargez l'application sur votre téléphone.</li>
-				<li>Allez sur à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>, cliquez sur "<b>Create Access Token</b>" et gardez la page ouverte nous en aurons besoin.</li>
+				<li>Allez à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>, cliquez sur "<b>Create Access Token</b>" et gardez la page ouverte nous en aurons besoin.</li>
 			</ul></p>
 			
 			<h4>Etape 2 - Configuration du plugin (.prop)</h4>
@@ -39,8 +39,11 @@
 					Ne pas oublier la virgule à la fin de chaque ligne. Ne pas supprimer la ligne {"name" : "debug", "number" : "debug"}
 					</li></ul></li>
 				<li>Dans le dossier du plugin, ouvrez le fichier "sms.xml" et rajoutez une ligne pour chacun de vos contacts sous cette forme :
-					<ul><li> < item >envoie un texto à prénom < tag > out.action.destinataire="prénom"; < /tag > < /item >
-					</li></ul></li>
+					<ul>
+						<li> < item >envoie un texto à robert < tag > out.action.destinataire="robert"; < /tag > < /item > </li>
+						<li> < item >envoie un texto à prénom < tag > out.action.destinataire="prénom"; < /tag > < /item > </li>
+					</ul>
+				</li>
 				<li></li>
 				<li></li>
 				<li></li>
