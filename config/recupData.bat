@@ -11,4 +11,4 @@ GOTO accessToken )
 
 curl --header "Access-Token: %token%" https://api.pushbullet.com/v2/users/me > user.json
 curl --header "Access-Token: %token%" https://api.pushbullet.com/v2/devices > devices.json
-pause
+exit
