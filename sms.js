@@ -4,7 +4,7 @@ exports.action = function(data, callback, cfg, SARAH){
 	var debug = false;
 
 	// Fonction qui envoie le message
-	function sendMessage(contactNumber, cfg, reponse){
+	function sendMessage(contactNumber, messageText, cfg, reponse){
 		var config = cfg.modules.sms;
 		var reponseSarah = config.reponse;
 
@@ -19,7 +19,7 @@ exports.action = function(data, callback, cfg, SARAH){
 		var body = 	{
 			push : {
 				'conversation_iden'	: contactNumber,
-				'message'			: 'message prédéfini à modifier',
+				'message'			: messageText,
 				'package_name'		: 'com.pushbullet.android',
 				'type'				: 'messaging_extension_reply',
 				'target_device_iden': config.target_device_iden,
@@ -67,9 +67,20 @@ exports.action = function(data, callback, cfg, SARAH){
 		var listeContacts = require('./listeContacts');
 		var numero = listeContacts.getNumber(data.destinataire.toLowerCase());
 		
+		// Retrait du texte de la commande vocale pour ne garder que le contenu du sms
+		if (!data.dictation){
+			return callback({'tts': "Je ne comprends pas"});
+		}
+		
+		var prenom = data.destinataire;
+		var str = data.dictation;
+		var patt1 = new RegExp(prenom, "i"); //si prenom = jean alors patt1 = jean/i
+		patt1.test(str);
+		var texte = RegExp.rightContext;
+		
 		
 		if (data.destinataire!=numero){
-			sendMessage(numero, cfg, function(reponse) {
+			sendMessage(numero, texte, cfg, function(reponse) {
 				if (reponse==true) {
 					console.log("Message à " + data.destinataire + " envoyé.");
 					Txt = new Array; 
