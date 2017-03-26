@@ -1,6 +1,6 @@
 {
   "modules" : { 
-    "sms"  : {
+    "envoisms"  : {
       "description"			: "Envoie des messages",
       "version"    			: "1.0",
 	  "auteur"				: "Batayman",
